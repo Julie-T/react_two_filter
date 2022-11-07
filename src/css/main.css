@@ -1,95 +1,73 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-/* @font-face {
-    font-family: OpenSans-Regular;
-    src: url("..//fonts/OpenSans-Regular.woff");
-    font-style: normal;
-    font-weight: normal;
-} */
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 1200px;
-    align-items: flex-start;
-    
+    column-count: 3;
+    column-gap: 10px;
+    width: 1000px;
 }
 
-.container:nth-child(3n+3) {
-    flex-wrap: wrap;
-}
+.figure {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+
 
 .image {
-    display: inline-block;
-    width: 360px;
+    max-width: 100%;
+    display: block;
+    width: 300px;
 }
-.image:nth-child(2n+1) {
-    margin-left: 20px;
-}
-/* .image:nth-child(n+5) {
+.figure > .image {
+    grid-row: 1 / -1;
+    grid-column: 1;
     
-} */
-.block:nth-child(n+3) {
-    margin-top: 20px;
-}
-
+  }
 
 .buttons-filter {
-    display: flex;
-    margin-left: 20px;;
+  display: flex;
+  margin-left: 20px;
 }
 
 .button-filter {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: none;
-    outline: 0;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: "Gill Sans", Arial, sans-serif;
-    color: #000000;
-    cursor: pointer;
-    text-align: center;
-    height: 45px;
-    padding: 10px 30px;
-}
-
-.button-filter:nth-child(n+2) {
-    margin-left: 15px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: none;
-    outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: none;
+  outline: 0;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Gill Sans', Arial, sans-serif;
+  color: #000000;
+  cursor: pointer;
+  text-align: center;
+  height: 45px;
+  padding: 10px 30px;
 }
 
 .button-filter:hover {
-    border-bottom: 1px solid #3e3c33;
-    background-color: #472c2c;
-    color: #ffffff;
+  border-bottom: 1px solid #3e3c33;
+  background-color: #472c2c;
+  color: #ffffff;
 }
 
-.button-filter:visited {
-    border-bottom: 1px solid #3e3c33;
-    background-color: #472c2c;
-    color: #ffffff;
+.button-filter-active {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: none;
+  outline: 0;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: #472c2c;
+  font-family: 'Gill Sans', Arial, sans-serif;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  height: 45px;
+  padding: 10px 30px;
 }
-
-/*
-vertical-align: middle;
-justify-content: space-between;
- */
-
- .blackButton {
-    background-color: #000000;
- }
-
- .whiteButton {
-    background-color: #ffffff;
- }
