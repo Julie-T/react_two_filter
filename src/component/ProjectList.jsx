@@ -7,14 +7,16 @@ export class ProjectList extends Component {
 
   render() {
     return (
+      
       <div className='container'>
+      <div className='menu'>
        {
         this.props.projects.map(card => {
           return <div className="figure" key={card.id}>
             <img className='image' src={card.img} alt="#"/>
             </div>
         })
-      }</div>
+      }</div></div>
     )
   }
 }

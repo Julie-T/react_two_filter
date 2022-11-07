@@ -15,7 +15,7 @@ export class Toolbar extends Component {
   }
   render() {
     return (
-      <div className="menu">
+      <div className="container">
         <div className="buttons-filter">
           {this.props.filters.map((filter) => (
             <button
