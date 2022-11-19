@@ -3,11 +3,12 @@ import React, { Component } from 'react'
 import '../css/main.css'
 
 export class ProjectList extends Component {
-  static propTypes = {}
+  static propTypes = {
+    projects: PropTypes.arrayOf(PropTypes.shape({img: PropTypes.string, category: PropTypes.string, id: PropTypes.number})).isRequired,
+  }
 
   render() {
     return (
-      
       <div className='container'>
       <div className='menu'>
        {

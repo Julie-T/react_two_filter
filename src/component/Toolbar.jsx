@@ -3,7 +3,11 @@ import React, { Component } from 'react'
 import '../css/main.css'
 
 export class Toolbar extends Component {
-  static propTypes = {}
+  static propTypes = {
+    filters: PropTypes.arrayOf(PropTypes.shape({ value: PropTypes.string, isActive: PropTypes.bool })).isRequired,
+    selected: PropTypes.string,
+    onSelectFilter: PropTypes.func
+  }
   constructor(props) {
     super(props)
     this.state = { onSelect: false }
