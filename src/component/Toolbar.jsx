@@ -5,8 +5,8 @@ import '../css/main.css'
 export class Toolbar extends Component {
   static propTypes = {
     filters: PropTypes.arrayOf(PropTypes.shape({ value: PropTypes.string, isActive: PropTypes.bool })).isRequired,
-    selected: PropTypes.string,
-    onSelectFilter: PropTypes.func
+    selected: PropTypes.string.isRequired,
+    onSelectFilter: PropTypes.func.isRequired,
   }
   constructor(props) {
     super(props)
